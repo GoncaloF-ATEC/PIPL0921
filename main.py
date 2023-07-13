@@ -117,6 +117,6 @@ alunos["novoCampo"] = "Novo valor"
 
 print("-------------loop dict ---------------")
 
-for elm in alunos.keys():
+for elm in alunos.items():
     print(elm)
 
