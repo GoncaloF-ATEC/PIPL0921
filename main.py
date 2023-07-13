@@ -115,9 +115,8 @@ print(alunos["nome"])
 print(alunos.get("nota"))
 alunos["novoCampo"] = "Novo valor"
 
-print(alunos)
-del alunos
+print("-------------loop dict ---------------")
 
-
-
+for elm in alunos:
+    print(elm)
 
