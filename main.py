@@ -1,15 +1,10 @@
+
+'''
+
 notaAluno = 9.9
 
 
-'''
 
-< 10 -> aporvado
-
-8 -  9.9 -> recup
-
-< 8 -> não aprovado
-
-'''
 
 notaAluno = ("João", 10)
 print(notaAluno[1])
@@ -59,3 +54,46 @@ valor = 100
 while valor > 0:
     print(valor)
     valor += 1
+
+'''
+
+print("Sets")
+
+my_set = {"valor1", "valor2", "valor3"}
+
+for set_val in my_set:
+    print(set_val)
+print(len(my_set))
+print("----v2----")
+my_set.add("Joao")
+print(len(my_set))
+my_set.add("Joao")
+print(len(my_set))
+my_set.remove("Joao")
+print(len(my_set))
+#my_set.remove("maria")
+for set_val in my_set:
+    print(set_val)
+my_set.add("Joao")
+print(my_set.__contains__("Joao"))
+
+def safe_remove(myset:set, valor):
+    if myset.__contains__(valor):
+        myset.remove(valor)
+        return True
+    else:
+        return False
+
+
+safe_remove(my_set, "retetre")
+
+print("----v3----")
+for set_val in my_set:
+    print(set_val)
+
+print("----Conjuntos----")
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+print(x.intersection(y))
+
