@@ -17,6 +17,7 @@ lista_notas = [10, 1, 12, 14, 1, 20, 10, 7, 8]
 lista_nomes = ["Joao", "maria", "Rita", "Ines", "mario", "rui", "luis", "pedro", "Hugo"]
 
 
+
 list_av = [("Joao", 10),("maria", 11),("Rita", 9),("luis", 2),("paulo", 2),("Nuno", 10)]
 
 
@@ -47,3 +48,14 @@ for i in range(list_size):
     is_aprovado(lista_notas[i], lista_nomes[i])
 
 
+def teste(nome:str, idade:int = 10) -> (str, int):
+    return f"{nome}, idade: {idade}"
+
+
+print(teste("joao", 19))
+
+valor = 100
+
+while valor > 0:
+    print(valor)
+    valor += 1
