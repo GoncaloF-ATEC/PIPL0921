@@ -116,5 +116,8 @@ print(alunos.get("nota"))
 alunos["novoCampo"] = "Novo valor"
 
 print(alunos)
-del alunos["novoCampo"]
-print(alunos)
+del alunos
+
+
+
+
