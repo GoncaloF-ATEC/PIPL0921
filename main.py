@@ -34,8 +34,8 @@ def isAprovadoV2(aluno):
 
 
 def add_nota(nota, aluno):
-    lista_notas.append(nota)
-    lista_nomes.append(aluno)
+    new_aluno = (aluno, nota)
+    list_av.append(new_aluno)
 
 
 add_nota(20, "Ricardo")
