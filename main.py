@@ -116,5 +116,5 @@ print(alunos.get("nota"))
 alunos["novoCampo"] = "Novo valor"
 
 print(alunos)
-alunos.popitem() # remove o ultima a ser adicionado
+del alunos["novoCampo"]
 print(alunos)
