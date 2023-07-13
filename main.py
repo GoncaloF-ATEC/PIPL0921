@@ -97,3 +97,24 @@ y = {"google", "microsoft", "apple"}
 
 print(x.intersection(y))
 
+print(x.union(y))
+
+
+print(x.difference(y))
+print(x.symmetric_difference(y)) #x.union(y) - x.intersection(y)
+
+print(x.union(y) - x.intersection(y))
+
+
+print("----------dicts-------------")
+
+alunos = {"nome": "Joao", "nota": 10, "escola": "Atec", "turma" : "PI"}
+alunos2 = {"nome": "Joao2", "nota": 10, "escola": "Atec2", "turma" : "PI2"}
+
+print(alunos["nome"])
+print(alunos.get("nota"))
+alunos["novoCampo"] = "Novo valor"
+
+print(alunos)
+alunos.popitem() # remove o ultima a ser adicionado
+print(alunos)
