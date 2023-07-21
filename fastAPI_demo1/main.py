@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from  Pessoa import ListaPessoas
+from Pessoa import ListaPessoas
 
 app = FastAPI()
 
@@ -9,7 +9,7 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-
+#http://127.0.0.1:8000/teste
 @app.get("/teste")
 async def rootTeste():
     p = ListaPessoas[0]
