@@ -23,6 +23,17 @@ async def rootTeste():
 
     return msg
 
+#http://127.0.0.1:8000/pessoa/5
+@app.get("/pessoa/{id}")
+async def list_pessoa_od(id: int):
+    try:
+        p = ListaPessoas[id]
+        return {"nome": f"{p.nome}", "idade": p.idade}
+    except:
+        return {"Erro": f"a pessoa {id} não existe"}
+
+
+
 #          /hello/Goncalo/2023
 @app.get("/hello/{name}/{ano}")
 async def say_hello(name: str, ano: int):
