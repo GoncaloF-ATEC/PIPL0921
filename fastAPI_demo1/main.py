@@ -43,5 +43,7 @@ async def say_hello(name: str, ano: int):
 
     return msg
 
-
-
+##Query Parameters
+@app.get("/testeqp")
+async def testeqp(id: int):
+    return id
