@@ -1,17 +1,27 @@
+class Ser_vivo:
+     def respirar(self):
+          print("a respirar")
 
-class Pessoa:
+
+class Pessoa(Ser_vivo):
      def __init__(self, nome: str, idade: int, email: str):
           self.nome = nome
           self.idade = idade
           self.email = email
+
+     @staticmethod
+     def teste():
+          print("metodo estatico")
 
      def __str__(self):
           return f"Pessoa(nome:{self.nome}, idade:{self.idade}, email: {self.email})"
 
 class Aluno(Pessoa):
      def __init__(self, nome: str, idade: int, email: str, turma:str):
-          Pessoa.__init__(nome, idade, email)
+          super().__init__(nome, idade, email)
+
           self.turma = turma
 
      def __str__(self):
-          return f"{Pessoa.__str__()}, turma: {self.turma}"
+          Pessoa.teste()
+          return f"{super().__str__()}, turma: {self.turma}"
