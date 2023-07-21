@@ -16,6 +16,7 @@ class Pessoa(Ser_vivo):
      def __str__(self):
           return f"Pessoa(nome:{self.nome}, idade:{self.idade}, email: {self.email})"
 
+
 class Aluno(Pessoa):
      def __init__(self, nome: str, idade: int, email: str, turma:str):
           super().__init__(nome, idade, email)
