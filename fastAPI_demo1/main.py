@@ -3,8 +3,6 @@ from Pessoa import ListaPessoas
 
 app = FastAPI()
 
-
-
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
