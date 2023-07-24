@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-from Pessoa import ListaPessoas
+from Pessoa import ListaPessoas, Pessoa2
 
 app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World222"}
 
 #http://127.0.0.1:8000/teste
 @app.get("/teste")
@@ -42,6 +42,28 @@ async def say_hello(name: str, ano: int):
     return msg
 
 ##Query Parameters
+# ?id=210
 @app.get("/testeqp")
 async def testeqp(id: int):
     return id
+
+
+
+'''
+https://www.fnac.pt
+/n1282366
+/Agendas-Calendarios-e-Planificadores
+/Agendas-Diarias#bl=MMpgm_1282366
+?SDM=list&ssi=5&sso=2
+'''
+
+
+@app.post("/pessoa2")
+async def get_pessoa2(p: Pessoa2):
+    return p
+
+
+@app.get("/pessoa3")
+async def get_pessoa3():
+    p = Pessoa2(nome="Gonçalo", idade=20)
+    return p
