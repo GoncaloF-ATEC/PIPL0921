@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Pessoa import ListaPessoas, Pessoa2
+from Pessoa import ListaPessoas, Pessoa2, Aluno
 import sqlite3
 
 app = FastAPI()
@@ -11,6 +11,22 @@ app = FastAPI()
 """
 
 """
+
+@app.get("/setup")
+async def setup_database():
+    conn = sqlite3.connect("pi_dbDemo.sqlite")
+
+    conn.execute("""
+    Create Table alunos(
+        id INTEGER primary key,
+        nome TEXT,
+        numero INTEGER,
+        email TEXT
+    )
+    """)
+
+
+    conn.close()
 
 
 @app.get("/")
@@ -75,3 +91,17 @@ async def get_pessoa2(p: Pessoa2):
 async def get_pessoa3():
     p = Pessoa2(nome="Gonçalo", idade=20)
     return p
+
+
+
+@app.post("/addAluno")
+async def add_aluno(al: Aluno):
+    conn = sqlite3.connect("pi_dbDemo.sqlite")
+    conn.execute(f"""
+        insert into Alunos ("nome", "numero", "email") 
+                    values ("{al.nome}", {al.num}, "{al.email}")
+    """)
+
+    conn.commit()
+
+    conn.close()

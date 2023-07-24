@@ -22,3 +22,9 @@ class Pessoa2(BaseModel):
     nome: str
     idade: int
     ufcd: list[UFCD]
+
+
+class Aluno(BaseModel):
+    nome: str
+    num: int
+    email: str
