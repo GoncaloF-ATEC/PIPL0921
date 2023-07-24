@@ -1,0 +1,57 @@
+// {  } -> obj
+    // "nome" : "valor"
+    // "lista": [ ]
+    // "obj": { } 
+
+// [ ] -> listas
+    // ["valor1", "vlore2"]
+    // [{}, {}, {} ]
+
+// valores  "nome": valor 
+    // "nome": { }   -> obj com nome
+    // "nome2": []   -> lista com nome
+
+
+[
+    {
+        "name": "Joao",
+        "idade": 20,
+        "emails": ["mail1@sapo.pt", "mail1@gmail.pt"],
+        "notas": [
+            {
+                "UFCD": 21312,
+                "UFCD": "nome1",
+                "nota": 10
+            },
+            {
+                "UFCD": 4432,
+                "UFCD": "nome2",
+                "nota": 10
+            }
+        ]
+    },
+    {
+    "name": "Mario",
+    "idade": 20,
+    "emails": ["mail1@sapo.pt", "mail1@gmail.pt"],
+    "notas": [
+        {
+            "UFCD": 21312,
+            "UFCD": "nome1",
+            "nota": 10
+        },
+          {
+            "UFCD": 4432,
+            "UFCD": "nome2",
+            "nota": 10
+        }
+    ]
+}
+
+]
+
+[
+    {
+        "name": "Joao"
+    }
+]
