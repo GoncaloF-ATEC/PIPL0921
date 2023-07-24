@@ -8,7 +8,17 @@ class Pessoa:
 ListaPessoas = [Pessoa("Joao", 30), Pessoa("Maria", 38)]
 
 
+class prof(BaseModel):
+    nome:str
+    exp: str
+
+class UFCD(BaseModel):
+    cod: str
+    numero: int
+    formador: prof
+
 
 class Pessoa2(BaseModel):
     nome: str
     idade: int
+    ufcd: list[UFCD]

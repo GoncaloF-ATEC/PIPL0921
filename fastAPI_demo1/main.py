@@ -1,7 +1,17 @@
 from fastapi import FastAPI
 from Pessoa import ListaPessoas, Pessoa2
+import sqlite3
 
 app = FastAPI()
+
+
+
+
+
+"""
+
+"""
+
 
 @app.get("/")
 async def root():
@@ -50,16 +60,14 @@ async def testeqp(id: int):
 
 
 '''
-https://www.fnac.pt
-/n1282366
-/Agendas-Calendarios-e-Planificadores
-/Agendas-Diarias#bl=MMpgm_1282366
-?SDM=list&ssi=5&sso=2
+JSON
+get vs Post
+intro BaseModel
 '''
-
 
 @app.post("/pessoa2")
 async def get_pessoa2(p: Pessoa2):
+    print(p)
     return p
 
 
