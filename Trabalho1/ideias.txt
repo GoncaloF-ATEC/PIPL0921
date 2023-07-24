@@ -1,0 +1,6 @@
+obj: criarem uma api para que premita gerir alunos numa esocola.
+
+Consultar:
+    turmas
+    professores 
+    alunos
